@@ -1,0 +1,76 @@
+<style>
+    /* Navigasi Custom CSS */
+    
+    .toggle-menu .leftbar:hover .c-avatar img {
+        margin-left: 25%;
+        width: 100px !important;
+    }
+    
+    .toggle-menu .leftbar:hover .c-name {
+        display: inline-block !important;
+        margin-top: 15px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .toggle-menu .leftbar:hover .c-menu-header {
+        display: inline-block !important;
+    }
+    
+    .toggle-menu .leftbar .c-name,
+    .toggle-menu .leftbar .c-menu-header {
+        display: none !important;
+    }
+    
+    .toggle-menu .leftbar .c-avatar {
+        margin-left: 15px;
+        margin-top: 50px;
+        display: block;
+        width: 100%;
+    }
+    
+    .toggle-menu .leftbar .c-avatar img {
+        width: 50px !important;
+    }
+    
+    .c-profil {
+        padding: 10px 0 10px 0;
+    }
+    
+    .c-profil .c-avatar {
+        margin-left: 25px;
+        display: inline-block;
+        width: 30%;
+    }
+    
+    .c-profil .c-avatar img {
+        border-radius: 50%;
+        margin-top: -50px;
+    }
+    
+    .c-profil .c-name {
+        display: inline-block;
+        width: 50%;
+        line-height: 1;
+    }
+    
+    .c-profil .c-name span {
+        font-size: 11px;
+    }
+    
+    .c-menu-header {
+        padding-left: 30px;
+        font-weight: bold;
+    }
+</style>
+<div class="c-profil mt-3">
+    <div class="c-avatar">
+        <img src="{{ url('/') }}/assets/images/users/profile.svg" style="width: 70px" alt="Avatar">
+    </div>
+    <div class="c-name">
+        <b>{{ \MojokertokabUser::getUser()->profil->namalengkap }}</b>
+        <br>
+        <span>{{ \MojokertokabUser::getUser()->profil->jabatan }}</span>
+    </div>
+</div>
